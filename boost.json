@@ -1,0 +1,13 @@
+{
+    "agents": [
+        "claude_code",
+        "codex"
+    ],
+    "editors": [
+        "vscode"
+    ],
+    "guidelines": [
+        "laravel/fortify"
+    ],
+    "sail": true
+}
