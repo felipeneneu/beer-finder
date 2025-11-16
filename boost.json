@@ -1,7 +1,8 @@
 {
     "agents": [
         "claude_code",
-        "codex"
+        "codex",
+        "gemini"
     ],
     "editors": [
         "vscode"
