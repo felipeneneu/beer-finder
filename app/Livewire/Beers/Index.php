@@ -6,6 +6,8 @@ use App\Models\Beer;
 use App\Services\BeerService;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Masmerise\Toaster\Toast;
+use Masmerise\Toaster\Toaster;
 
 class Index extends Component
 {
@@ -41,6 +43,13 @@ class Index extends Component
             'filters.prop_filter_rule' => 'required_with:filters.prop.filter',
             'filters.prop_filter_value' => 'required_with:filters.prop.rule',
         ]);
+        $this->resetPage();
+    }
+
+    public function remove(Beer $beer)
+    {
+        $beer->delete();
+        Toaster::info("{$beer->name} foi removida com sucesso!");
         $this->resetPage();
     }
 
